@@ -1,5 +1,5 @@
 body{
-    background-color: aquamarine;
+    background-color: rgb(0, 136, 255);
     color: black;
     display: grid;
     grid-template-columns: auto 800px auto;
@@ -14,20 +14,27 @@ body{
 #gameWindow{
     width: 800px;
     height: 608px;
-    background-color: #0000ff;
+    background-color: #001aff;
     grid-row-start: 2;
     grid-column-start: 2;
     position: relative;
 }
 
 #mainCharacter {
-    top: 306px;
-    left: 174px;
+    top: 280px;
+    left: 200px;
+}
+#door1 {
+    width: 32px;
+    height: 32px;
+    left: 192px;
+    top: 256px;
 }
 
 .gameObject{
     position: absolute;
     /*background-color: #fff;*/
+    transition: all 1s ease-in-out;
 
 }
 
