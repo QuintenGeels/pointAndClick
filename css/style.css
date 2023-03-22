@@ -1,9 +1,44 @@
-body {
-    background-color: #000;
-    color: #fff;
+body{
+    background-color: aquamarine;
+    color: black;
+    display: grid;
+    grid-template-columns: auto 800px auto;
 }
-#gameWindow {
+
+#main-Title{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    text-align: center;
+}
+
+#gameWindow{
     width: 800px;
     height: 608px;
-    background-color: blue;
+    background-color: #0000ff;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    position: relative;
+}
+
+#mainCharacter {
+    top: 306px;
+    left: 174px;
+}
+
+.gameObject{
+    position: absolute;
+    /*background-color: #fff;*/
+
+}
+
+.foreGround{
+    z-index: 1000;
+}
+
+.character{
+    z-index: 100;
+}
+
+.background{
+    z-index: 0;
 }

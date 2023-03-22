@@ -1,1 +1,1 @@
-document.getElementById("mainTitel").innerText = "point and click adventure";
+document.getElementById("main-Title").innerText = "Point and click adventure";
