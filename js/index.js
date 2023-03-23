@@ -16,6 +16,10 @@ gameWindow.onclick=function(e){
         console.log("this is closed")
         document.getElementById("text").innerText = "THIS IS THE BEST POINT AND CLICK ADVENTURE!!!";
         document.getElementById("text").style.backgroundColor = "#fff";
+        disapearText(function(){
+            document.getElementById("text").innerHTML = '';
+            document.getElementById("text").style.backgroundColor = "";
+        }, 4000);
             break;
         case "door2":
         console.log("nobody is here")
@@ -26,7 +30,5 @@ gameWindow.onclick=function(e){
     }
 
 }
-setTimeout(function(){
-    document.getElementById("text").innerHTML = '';
-    document.getElementById("text").style.backgroundColor = "";
-}, 4000);
+
+
