@@ -14,6 +14,8 @@ gameWindow.onclick=function(e){
     switch(e.target.id){
         case "door1":
         console.log("this is closed")
+        document.getElementById("text").innerText = "THIS IS THE BEST POINT AND CLICK ADVENTURE!!!";
+        document.getElementById("text").style.backgroundColor = "#fff";
             break;
         case "door2":
         console.log("nobody is here")
@@ -21,10 +23,10 @@ gameWindow.onclick=function(e){
         default:
             console.log("idk what to do")
             break;
-
-
-
-
     }
 
 }
+setTimeout(function(){
+    document.getElementById("text").innerHTML = '';
+    document.getElementById("text").style.backgroundColor = "";
+}, 4000);
