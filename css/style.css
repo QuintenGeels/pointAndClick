@@ -35,9 +35,11 @@ body{
     width: 128px;
     height: 64px;
     left: 224px;
-    top: 256px;
+    top: 270px;
     font-size: 12px;
-    
+    border-radius: 5% 30% 50% 70%;
+    text-align: center;
+    padding-top: 15px;
 }
 
 .gameObject{
