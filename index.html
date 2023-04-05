@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Style.css">
-    <title>Point and click Adventure</title>
+    <title>point and click adventure</title>
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <h1 id="main-Title"></h1>
-    <div id="gameWindow">
-        <!--foreGround Layer-->
-        <div id="door1" class="gameObject foreGround"></div>
-        <div id="text" class="gameObject foreGround"></div>
 
-        <!--mainCharacter Layer-->
-        <div id="mainCharacter" class="gameObject  character ">
-            <img src="img/Player.png" alt="mainCharacter">
+<body>
+    <h1 id="mainTitle"></h1>
+    <div id="gameWindow">
+        <!--dialogue bar-->
+        <div id="dialogueBar" class="gameObject foreground">
+            <div id="dialogueContent">
+                <div id="brownBar" class="gameObject foreground"></div>
+
+                <img id="hero" class="gameObject foreground" src="img/Player.png" alt="main character">
+                <div id="mainCharacterSpeech" class="gameObject foreground speech-bubble">...</div>
+
+            </div>
         </div>
-        <!--background Layer-->
-        <div id="tileMap" class="gameObject background">
-            <img src="img/backGround.png" alt="tileMap">
+
+        <!--foreground layer-->
+        <div id="door1" class="gameObject foreground"></div>
+        <div id="door2" class="gameObject foreground"></div>
+
+        <!--main character layer-->
+        <div id="mainCharacter" class="gameObject character">
+            <img src="img/Player.png" alt="main character">
+        </div>
+
+        <!--background layer-->
+        <div id="titlemap" class="gameObject background">
+            <img src="img/backGround.png" alt="tilemap">
         </div>
     </div>
-    
-    
-    
-    
     <script src="js/index.js"></script>
 </body>
+
 </html>

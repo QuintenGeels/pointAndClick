@@ -1,34 +1,41 @@
-document.getElementById("main-Title").innerText = "Point and click adventure";
+document.getElementById("mainTitle").innerText = "Point and Click adventure";
 const offsetCharacter = 16;
-const gameWindow = document.getElementById("gameWindow")
-const mainCharacter = document.getElementById("mainCharacter")
+const gameWindow = document.getElementById("gameWindow");
+const mainCharacter = document.getElementById("mainCharacter");
 
-gameWindow.onclick=function(e){
-    var rect = gameWindow.getBoundingClientRect();
-    var x = e.clientX - rect.left;
-    var y = e.clientY - rect.top;
-    mainCharacter.style.left = x - offsetCharacter + "px";
-    mainCharacter.style.top = y - offsetCharacter - offsetCharacter + "px";
+const mainCharacterSpeech = document.getElementById("mainCharacterSpeech");
 
-    console.log(e.target.id)
-    switch(e.target.id){
-        case "door1":
-        console.log("this is closed")
-        document.getElementById("text").innerText = "THIS IS THE BEST POINT AND CLICK ADVENTURE!!!";
-        document.getElementById("text").style.backgroundColor = "#fff";
-        setTimeout(function(){
-            document.getElementById("text").innerHTML = '';
-            document.getElementById("text").style.backgroundColor = "";
-        }, 4000);
-            break;
-        case "door2":
-        console.log("nobody is here")
-            break;
-        default:
-            console.log("idk what to do")
-            break;
+gameWindow.onclick = function (e) {
+    if (mainCharacterSpeech.style.opacity == 0) {
+        var rect = gameWindow.getBoundingClientRect();
+        var x = e.clientX - rect.left; //x position within the element.
+        var y = e.clientY - rect.top;  //y position within the element.
+
+        mainCharacter.style.left = x - offsetCharacter + "px";
+        mainCharacter.style.top = y - offsetCharacter + "px";
+
+        console.log(e.target.id);
+        switch (e.target.id) {
+            case "door1":
+                showMessage("this door is closed.. DAMN YOU DOOR!");
+                break;
+            case "door2":
+                showMessage("Nobody is here... what should I do?");
+                break;
+            default:
+                hideMessage();
+                break;
+        }
     }
-
 }
 
+function showMessage(message) {
+    mainCharacterSpeech.innerHTML = message;
+    mainCharacterSpeech.style.opacity = 1;
+    setTimeout(hideMessage, 4000);
+}
 
+function hideMessage() {
+    mainCharacterSpeech.innerHTML = "...";
+    mainCharacterSpeech.style.opacity = 0;
+}
