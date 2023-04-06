@@ -70,7 +70,7 @@ body {
 .gameObject {
     position: absolute;
     transition: all 1s ease-in-out;
-    background-color: #FFF;
+    /*background-color: #FFF;*/
 }
 
 .foreground {
