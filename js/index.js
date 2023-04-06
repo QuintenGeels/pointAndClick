@@ -17,10 +17,10 @@ gameWindow.onclick = function (e) {
         console.log(e.target.id);
         switch (e.target.id) {
             case "door1":
-                showMessage("this door is closed.. DAMN YOU DOOR!");
+                showMessage("This sign says to inspect the obelisk, TO THE OBELISK IT IS!");
                 break;
             case "door2":
-                showMessage("Nobody is here... what should I do?");
+                showMessage("Only gyberisch signs here... what should I do?");
                 break;
             default:
                 hideMessage();
